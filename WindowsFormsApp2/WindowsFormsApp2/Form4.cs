@@ -16,5 +16,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void guna2CirclePictureBox10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

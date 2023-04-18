@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
     public partial class Form5 : Form
+        
     {
+        private object form1;
+
         public Form5()
         {
             InitializeComponent();
@@ -30,6 +33,18 @@ namespace WindowsFormsApp2
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e) => NewMethod();
+
+        private void NewMethod()
+        {
+            object p = form1.Show();
         }
     }
 }

@@ -36,12 +36,12 @@ namespace WindowsFormsApp2
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -97,9 +97,9 @@ namespace WindowsFormsApp2
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Location = new System.Drawing.Point(6, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 25);
+            this.label1.Size = new System.Drawing.Size(112, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "My Quiz";
             // 
@@ -109,9 +109,9 @@ namespace WindowsFormsApp2
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.label2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(68, 188);
+            this.label2.Location = new System.Drawing.Point(48, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Dashboard";
             // 
@@ -121,9 +121,9 @@ namespace WindowsFormsApp2
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.label3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(77, 285);
+            this.label3.Location = new System.Drawing.Point(55, 315);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Student";
             // 
@@ -133,11 +133,11 @@ namespace WindowsFormsApp2
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.label5.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(77, 239);
+            this.label5.Location = new System.Drawing.Point(55, 256);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(90, 23);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Teacher";
+            this.label5.Text = "Quiz Add";
             // 
             // groupBox4
             // 
@@ -156,6 +156,16 @@ namespace WindowsFormsApp2
             this.groupBox4.Text = "Total students";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(136, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "0";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.RoyalBlue;
@@ -169,6 +179,15 @@ namespace WindowsFormsApp2
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Total  Teacher";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(136, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 31);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "0";
             // 
             // groupBox2
             // 
@@ -184,6 +203,15 @@ namespace WindowsFormsApp2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total Questions";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(139, 47);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 30);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "0";
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.HotPink;
@@ -198,40 +226,12 @@ namespace WindowsFormsApp2
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "total Quiz";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(136, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "0";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(136, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 26);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(139, 47);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 24);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "0";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(136, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 26);
+            this.label9.Size = new System.Drawing.Size(25, 31);
             this.label9.TabIndex = 1;
             this.label9.Text = "0";
             // 
@@ -243,7 +243,7 @@ namespace WindowsFormsApp2
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(12, 61);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 20);
+            this.label10.Size = new System.Drawing.Size(76, 25);
             this.label10.TabIndex = 25;
             this.label10.Text = "HELLO ,";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -256,7 +256,7 @@ namespace WindowsFormsApp2
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(77, 61);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 20);
+            this.label11.Size = new System.Drawing.Size(50, 25);
             this.label11.TabIndex = 26;
             this.label11.Text = "NUR";
             // 
@@ -273,12 +273,13 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox10.TabIndex = 28;
             this.guna2CirclePictureBox10.TabStop = false;
+            this.guna2CirclePictureBox10.Click += new System.EventHandler(this.guna2CirclePictureBox10_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.menu;
-            this.pictureBox1.Location = new System.Drawing.Point(116, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(122, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +291,7 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2CirclePictureBox5.Image = global::WindowsFormsApp2.Properties.Resources.dashboard__2_;
             this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(16, 180);
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(12, 205);
             this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
             this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox5.Size = new System.Drawing.Size(30, 26);
@@ -303,7 +304,7 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2CirclePictureBox4.Image = global::WindowsFormsApp2.Properties.Resources.teacher;
             this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(16, 229);
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(12, 251);
             this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
             this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox4.Size = new System.Drawing.Size(30, 28);
@@ -316,7 +317,7 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2CirclePictureBox2.Image = global::WindowsFormsApp2.Properties.Resources.student;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(12, 275);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(12, 310);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(30, 28);
@@ -393,7 +394,7 @@ namespace WindowsFormsApp2
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 11F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.guna2CirclePictureBox10);
