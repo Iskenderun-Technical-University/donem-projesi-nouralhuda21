@@ -26,5 +26,36 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+            if (guna2TextBox3.Text == "" && guna2TextBox4.Text == "")
+            {
+                MessageBox.Show("ERROR");
+            }
+            else
+            {
+
+
+                this.Hide();
+                Form3.form1.Show();
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text == "" && guna2TextBox2.Text == "")
+            {
+                MessageBox.Show("ERROR");
+            }
+            else
+            {
+
+
+                this.Hide();
+                Form3.form4.Show();
+            }
+        }
     }
 }

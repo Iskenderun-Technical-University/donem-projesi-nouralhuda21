@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
@@ -17,10 +10,10 @@ namespace WindowsFormsApp2
             
             InitializeComponent();
             }
-            public static Form2 form2 = new Form2();
-        public static Form1 form1 = new Form1();
-        public static Form3 form3 = new Form3();
-        public static Form4 form4 = new Form4 ();
+        public static Form1  form1 = new Form1();
+        public static Form2 form2 = new Form2();
+       
+        public static Form4 form4 = new Form4();
         public static Form5 form5 = new Form5();
         public static Form6 form6 = new Form6();
         public static Form7 form7 = new Form7();
@@ -32,7 +25,6 @@ namespace WindowsFormsApp2
             form2.Show();
             timer1.Stop();
         }
-
         private void Form3_Load(object sender, EventArgs e)
         {
 

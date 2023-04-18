@@ -71,5 +71,11 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3.form5.Show();
+        }
     }
 }

@@ -115,6 +115,7 @@ namespace WindowsFormsApp2
             this.guna2Button3.Size = new System.Drawing.Size(138, 41);
             this.guna2Button3.TabIndex = 7;
             this.guna2Button3.Text = "submit";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2TextBox1
             // 
@@ -231,6 +232,7 @@ namespace WindowsFormsApp2
             this.guna2Button1.Size = new System.Drawing.Size(138, 41);
             this.guna2Button1.TabIndex = 20;
             this.guna2Button1.Text = "submit";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2CirclePictureBox5
             // 

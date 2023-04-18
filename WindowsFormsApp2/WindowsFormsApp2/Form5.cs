@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
     public partial class Form5 : Form
         
     {
-        private object form1;
+       
 
         public Form5()
         {
@@ -40,11 +40,16 @@ namespace WindowsFormsApp2
             Application.Exit();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e) => NewMethod();
+        private void PictureBox1_Click(object sender, EventArgs e) 
 
-        private void NewMethod()
+        
         {
-            object p = form1.Show();
+          
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
