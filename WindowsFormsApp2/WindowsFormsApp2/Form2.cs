@@ -11,7 +11,14 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
+
     {
+        public static bool check(string str)
+        {
+            return (String.IsNullOrEmpty(str) ||
+                str.Trim().Length == 0) ? true : false;
+        }
+
         public Form2()
         {
             InitializeComponent();
@@ -30,7 +37,8 @@ namespace WindowsFormsApp2
         private void guna2Button3_Click(object sender, EventArgs e)
         {
 
-            if (guna2TextBox3.Text == "" && guna2TextBox4.Text == "")
+            if (check(guna2TextBox3.Text) == true || check(guna2TextBox4.Text) == true)
+
             {
                 MessageBox.Show("ERROR");
             }
@@ -45,7 +53,7 @@ namespace WindowsFormsApp2
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox1.Text == "" && guna2TextBox2.Text == "")
+            if (check(guna2TextBox1.Text)== true || check(guna2TextBox2.Text)==true)
             {
                 MessageBox.Show("ERROR");
             }
@@ -56,6 +64,11 @@ namespace WindowsFormsApp2
                 this.Hide();
                 Form3.form4.Show();
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,5 +21,11 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3.form8.Show();
+        }
     }
 }

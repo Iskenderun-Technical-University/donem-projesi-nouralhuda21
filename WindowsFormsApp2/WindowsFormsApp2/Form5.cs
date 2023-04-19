@@ -11,9 +11,13 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
     public partial class Form5 : Form
-        
+
     {
-       
+        public static bool check(string str)
+        {
+            return (String.IsNullOrEmpty(str) ||
+                str.Trim().Length == 0) ? true : false;
+        }
 
         public Form5()
         {
@@ -40,16 +44,44 @@ namespace WindowsFormsApp2
             Application.Exit();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e) 
+        private void PictureBox1_Click(object sender, EventArgs e)
 
-        
+
         {
-          
+            this.Hide();
+            Form3.form1.Show();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (check(guna2TextBox1.Text) == true || check(guna2TextBox2.Text) == true || check(guna2TextBox1.Text) == true || check(guna2TextBox3.Text) == true)
+  
+
+            {
+                MessageBox.Show("ERROR");
+            }
+            else
+            {
+
+
+                this.Hide();
+                Form3.form6.Show();
+            }
+            }
+
+        private void guna2TextBox3_TextChanged_1(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(guna2TextBox3.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                guna2TextBox3.Text = guna2TextBox3.Text.Remove(guna2TextBox3.Text.Length - 1);
+            }
+        }
     }
-}
+    }
+
