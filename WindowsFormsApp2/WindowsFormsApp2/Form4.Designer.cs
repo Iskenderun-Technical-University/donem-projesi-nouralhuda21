@@ -82,6 +82,7 @@ namespace WindowsFormsApp2
             this.label11.Size = new System.Drawing.Size(50, 25);
             this.label11.TabIndex = 43;
             this.label11.Text = "NUR";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -94,6 +95,7 @@ namespace WindowsFormsApp2
             this.label10.Size = new System.Drawing.Size(76, 25);
             this.label10.TabIndex = 42;
             this.label10.Text = "HELLO ,";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // groupBox3
             // 
@@ -199,6 +201,7 @@ namespace WindowsFormsApp2
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 32;
             this.label3.Text = "Quiz List";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -434,6 +437,7 @@ namespace WindowsFormsApp2
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox9)).EndInit();
@@ -460,7 +464,6 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
@@ -485,5 +488,6 @@ namespace WindowsFormsApp2
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
+        public System.Windows.Forms.Label label11;
     }
 }
