@@ -464,13 +464,13 @@ namespace WindowsFormsApp2
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox7;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox8;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox9;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
+        public System.Windows.Forms.Label label11;
     }
 }
 

@@ -62,7 +62,7 @@ namespace WindowsFormsApp2
             this.listView1.Location = new System.Drawing.Point(342, -1);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(357, 617);
+            this.listView1.Size = new System.Drawing.Size(362, 617);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);

@@ -30,6 +30,8 @@ namespace WindowsFormsApp2
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            SqlCommand com = new SqlCommand();
+            userid = guna2TextBox3.Text;
 
             if (check(guna2TextBox3.Text) == true || check(guna2TextBox4.Text) == true)
 
@@ -38,10 +40,26 @@ namespace WindowsFormsApp2
             }
             else
             {
+                con.Open();
+                com.Connection = con;
+                com.CommandText = " select * from TeacherLogin where UserName='" + guna2TextBox3.Text +
+                    "'And Password='" + guna2TextBox4.Text + "'";
+                SqlDataReader reader = com.ExecuteReader();
 
+                if (reader.Read())
+                {
+                    this.Hide();
+                    Form3.form1.Show();
+                    Form3.form1.label11.Text = userid;
+                }
+                else
+                {
+                    MessageBox.Show("" +
 
-                this.Hide();
-                Form3.form1.Show();
+                        "Invaild login datails!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    guna2TextBox3.Clear(); guna2TextBox4.Clear(); guna2TextBox3.Focus();
+                }
+                con.Close();
             }
         }
 
@@ -91,7 +109,23 @@ namespace WindowsFormsApp2
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-
+            if (check(guna2TextBox3.Text) == true || check(guna2TextBox4.Text) == true)
+            {
+                MessageBox.Show("ERROR");
+            }
+            else
+            {
+                con.Open();
+                string query = " INSERT INTO TeacherLogin(UserName , Password) VALUES(@UserName ,@Password)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@UserName", guna2TextBox3.Text);
+                cmd.Parameters.AddWithValue("@Password", guna2TextBox4.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                guna2TextBox3.Clear(); guna2TextBox4.Clear();
+                guna2TextBox3.Focus();
+                MessageBox.Show("User saved");
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
