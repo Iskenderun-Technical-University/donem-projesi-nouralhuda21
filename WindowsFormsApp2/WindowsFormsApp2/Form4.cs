@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace WindowsFormsApp2
 {
     public partial class Form4 : Form
     {
+        DataTable dt = new DataTable();
+        DataTable dt2 = new DataTable();
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\proje3\donem-projesi-nouralhuda21\WindowsFormsApp2\WindowsFormsApp2\Database.mdf;Integrated Security=True");
+
+
         public Form4()
         {
             InitializeComponent();
@@ -38,16 +43,23 @@ namespace WindowsFormsApp2
         private void Form4_Load(object sender, EventArgs e)
         {
 
+            con.Open();
+            string query = "select * from StudentLogin";
+            string query2 = "select * from TeacherLogin";
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter Adb = new SqlDataAdapter(cmd);
+            SqlDataAdapter Adb2 = new SqlDataAdapter(cmd2);
+            Adb.Fill(dt);
+            Adb.Fill(dt2);
+            con.Close();
+            label6.Text = dt.Rows.Count.ToString();
+            label7.Text = dt2.Rows.Count.ToString();
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

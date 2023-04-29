@@ -7,75 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
-    {
+    { 
+        DataTable dt = new DataTable();
+        DataTable dt2 = new DataTable();
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\proje3\donem-projesi-nouralhuda21\WindowsFormsApp2\WindowsFormsApp2\Database.mdf;Integrated Security=True");
+
+
         public Form1()
+
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            con.Open();
+            string query = "select * from StudentLogin";
+            string query2 = "select * from TeacherLogin";
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter Adb = new SqlDataAdapter(cmd);
+            SqlDataAdapter Adb2 = new SqlDataAdapter(cmd2);
+            Adb.Fill(dt);
+            Adb.Fill(dt2);
+            con.Close();
+           label6.Text = dt.Rows.Count.ToString();
+            label7.Text = dt2.Rows.Count.ToString();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
 
-        }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox10_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void label5_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form3.form5.Show();
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
     }
 }

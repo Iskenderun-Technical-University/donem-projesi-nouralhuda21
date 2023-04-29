@@ -49,12 +49,12 @@ namespace WindowsFormsApp2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox9)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -63,7 +63,6 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
@@ -82,7 +81,7 @@ namespace WindowsFormsApp2
             this.label11.Size = new System.Drawing.Size(50, 25);
             this.label11.TabIndex = 43;
             this.label11.Text = "NUR";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+           
             // 
             // label10
             // 
@@ -95,8 +94,7 @@ namespace WindowsFormsApp2
             this.label10.Size = new System.Drawing.Size(76, 25);
             this.label10.TabIndex = 42;
             this.label10.Text = "HELLO ,";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
+           
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.HotPink;
@@ -233,6 +231,7 @@ namespace WindowsFormsApp2
             this.richTextBox2.Location = new System.Drawing.Point(-7, 44);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(203, 514);
             this.richTextBox2.TabIndex = 29;
             this.richTextBox2.Text = "";
@@ -243,6 +242,7 @@ namespace WindowsFormsApp2
             this.richTextBox1.Location = new System.Drawing.Point(-7, -1);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(942, 48);
             this.richTextBox1.TabIndex = 28;
             this.richTextBox1.Text = "";
@@ -326,22 +326,6 @@ namespace WindowsFormsApp2
             this.label7.TabIndex = 1;
             this.label7.Text = "0";
             // 
-            // guna2CirclePictureBox10
-            // 
-            this.guna2CirclePictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.guna2CirclePictureBox10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2CirclePictureBox10.Image = global::WindowsFormsApp2.Properties.Resources.close__1_;
-            this.guna2CirclePictureBox10.ImageRotate = 0F;
-            this.guna2CirclePictureBox10.Location = new System.Drawing.Point(897, 7);
-            this.guna2CirclePictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2CirclePictureBox10.Name = "guna2CirclePictureBox10";
-            this.guna2CirclePictureBox10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox10.Size = new System.Drawing.Size(22, 20);
-            this.guna2CirclePictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox10.TabIndex = 47;
-            this.guna2CirclePictureBox10.TabStop = false;
-            this.guna2CirclePictureBox10.Click += new System.EventHandler(this.guna2CirclePictureBox10_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
@@ -410,12 +394,25 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox1.TabIndex = 37;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(890, 7);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 47;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
-            this.Controls.Add(this.guna2CirclePictureBox10);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -450,7 +447,6 @@ namespace WindowsFormsApp2
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
@@ -487,7 +483,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
         public System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
