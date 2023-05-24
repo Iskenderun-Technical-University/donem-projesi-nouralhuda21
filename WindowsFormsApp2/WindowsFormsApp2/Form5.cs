@@ -67,7 +67,7 @@ namespace WindowsFormsApp2
             }
             else
             {
-
+                Form3.form6.label10.Text = guna2TextBox1.Text;
 
                 this.Hide();
                 Form3.form6.Show();

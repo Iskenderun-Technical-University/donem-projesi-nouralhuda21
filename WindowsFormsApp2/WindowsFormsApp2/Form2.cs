@@ -153,5 +153,10 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
