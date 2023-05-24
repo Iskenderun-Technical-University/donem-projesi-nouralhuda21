@@ -363,6 +363,7 @@ namespace WindowsFormsApp2
             this.guna2Button4.Size = new System.Drawing.Size(93, 30);
             this.guna2Button4.TabIndex = 14;
             this.guna2Button4.Text = "delete";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button2
             // 
@@ -390,6 +391,7 @@ namespace WindowsFormsApp2
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 49;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // dataQuesTableAdapter
             // 

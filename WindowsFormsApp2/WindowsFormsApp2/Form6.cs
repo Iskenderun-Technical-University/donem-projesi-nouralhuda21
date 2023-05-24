@@ -106,5 +106,29 @@ namespace WindowsFormsApp2
                 throw;
             }
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            if (check(textBox1.Text) == true || check(textBox2.Text) == true || check(textBox3.Text) == true || check(textBox4.Text) == true || check(textBox5.Text) == true || check(textBox6.Text) == true)
+            {
+                MessageBox.Show("please enter the required data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                con.Open();
+                string query = "DELETE FROM DataQues WHERE ID=" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("deleted successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView1.DataSource = LoadUserTable();
+                textBox1.Clear(); textBox2.Clear(); textBox3.Clear(); textBox4.Clear(); textBox5.Clear(); textBox6.Clear();
+            }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
