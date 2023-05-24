@@ -318,7 +318,7 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(691, 476);
+            this.ClientSize = new System.Drawing.Size(698, 475);
             this.Controls.Add(this.guna2CirclePictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.guna2Panel2);

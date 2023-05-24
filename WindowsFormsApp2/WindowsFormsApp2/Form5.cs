@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (check(guna2TextBox1.Text) == true || check(guna2TextBox2.Text) == true || check(guna2TextBox1.Text) == true || check(guna2TextBox3.Text) == true)
+            if (check(guna2TextBox1.Text) == true  || check(guna2TextBox3.Text) == true)
   
 
             {
@@ -81,6 +81,11 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Please enter only numbers.");
                 guna2TextBox3.Text = guna2TextBox3.Text.Remove(guna2TextBox3.Text.Length - 1);
             }
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

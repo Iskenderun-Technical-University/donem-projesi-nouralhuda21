@@ -84,13 +84,13 @@ namespace WindowsFormsApp2
             this.guna2ShadowPanel1.Controls.Add(this.label4);
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(30, 20);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(30, 52);
             this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 15;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(391, 366);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(337, 334);
             this.guna2ShadowPanel1.TabIndex = 11;
             // 
             // label9
@@ -212,22 +212,22 @@ namespace WindowsFormsApp2
             this.guna2ShadowPanel2.Controls.Add(this.label6);
             this.guna2ShadowPanel2.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel2.Location = new System.Drawing.Point(427, 20);
+            this.guna2ShadowPanel2.Location = new System.Drawing.Point(404, 52);
             this.guna2ShadowPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.Radius = 10;
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel2.ShadowShift = 15;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(391, 366);
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(366, 334);
             this.guna2ShadowPanel2.TabIndex = 12;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(41, 95);
+            this.label11.Location = new System.Drawing.Point(29, 82);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(313, 235);
+            this.label11.Size = new System.Drawing.Size(313, 222);
             this.label11.TabIndex = 11;
             this.label11.Text = resources.GetString("label11.Text");
             // 
@@ -236,7 +236,7 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(837, 411);
+            this.ClientSize = new System.Drawing.Size(796, 405);
             this.Controls.Add(this.guna2ShadowPanel2);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.label1);

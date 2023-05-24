@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -46,16 +47,24 @@ namespace WindowsFormsApp2
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.databaseDataSet = new WindowsFormsApp2.DatabaseDataSet();
+            this.dataQuesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataQuesTableAdapter = new WindowsFormsApp2.DatabaseDataSetTableAdapters.DataQuesTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thirdOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fourthOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correctAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quizTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataQuesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,9 +95,9 @@ namespace WindowsFormsApp2
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Location = new System.Drawing.Point(23, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 649);
+            this.groupBox1.Size = new System.Drawing.Size(392, 631);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Questions Add";
@@ -104,7 +113,7 @@ namespace WindowsFormsApp2
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Urdu Typesetting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 500);
+            this.label8.Location = new System.Drawing.Point(25, 500);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 35);
             this.label8.TabIndex = 12;
@@ -180,7 +189,7 @@ namespace WindowsFormsApp2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Urdu Typesetting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(25, 50);
+            this.label2.Location = new System.Drawing.Point(21, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 55);
             this.label2.TabIndex = 5;
@@ -210,80 +219,45 @@ namespace WindowsFormsApp2
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 229);
+            this.textBox2.Location = new System.Drawing.Point(112, 231);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(270, 31);
             this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 129);
+            this.textBox1.Location = new System.Drawing.Point(31, 129);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 31);
+            this.textBox1.Size = new System.Drawing.Size(298, 50);
             this.textBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.idDataGridViewTextBoxColumn,
+            this.questionDataGridViewTextBoxColumn,
+            this.firstOptionDataGridViewTextBoxColumn,
+            this.secondOptionDataGridViewTextBoxColumn,
+            this.thirdOptionDataGridViewTextBoxColumn,
+            this.fourthOptionDataGridViewTextBoxColumn,
+            this.correctAnswerDataGridViewTextBoxColumn,
+            this.quizTypeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dataQuesBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(510, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(429, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 465);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(888, 494);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Question";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "option 1";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "option 2";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "option3";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "option4";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "correct";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // guna2Button4
             // 
@@ -294,7 +268,7 @@ namespace WindowsFormsApp2
             this.guna2Button4.FillColor = System.Drawing.Color.White;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2Button4.Location = new System.Drawing.Point(510, 447);
+            this.guna2Button4.Location = new System.Drawing.Point(439, 586);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(93, 30);
             this.guna2Button4.TabIndex = 14;
@@ -309,11 +283,95 @@ namespace WindowsFormsApp2
             this.guna2Button2.FillColor = System.Drawing.Color.White;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2Button2.Location = new System.Drawing.Point(609, 447);
+            this.guna2Button2.Location = new System.Drawing.Point(547, 586);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(94, 30);
             this.guna2Button2.TabIndex = 15;
             this.guna2Button2.Text = "edit";
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1283, 2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 49;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataQuesBindingSource
+            // 
+            this.dataQuesBindingSource.DataMember = "DataQues";
+            this.dataQuesBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // dataQuesTableAdapter
+            // 
+            this.dataQuesTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // questionDataGridViewTextBoxColumn
+            // 
+            this.questionDataGridViewTextBoxColumn.DataPropertyName = "Question";
+            this.questionDataGridViewTextBoxColumn.HeaderText = "Question";
+            this.questionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
+            // 
+            // firstOptionDataGridViewTextBoxColumn
+            // 
+            this.firstOptionDataGridViewTextBoxColumn.DataPropertyName = "FirstOption";
+            this.firstOptionDataGridViewTextBoxColumn.HeaderText = "FirstOption";
+            this.firstOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstOptionDataGridViewTextBoxColumn.Name = "firstOptionDataGridViewTextBoxColumn";
+            // 
+            // secondOptionDataGridViewTextBoxColumn
+            // 
+            this.secondOptionDataGridViewTextBoxColumn.DataPropertyName = "SecondOption";
+            this.secondOptionDataGridViewTextBoxColumn.HeaderText = "SecondOption";
+            this.secondOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.secondOptionDataGridViewTextBoxColumn.Name = "secondOptionDataGridViewTextBoxColumn";
+            // 
+            // thirdOptionDataGridViewTextBoxColumn
+            // 
+            this.thirdOptionDataGridViewTextBoxColumn.DataPropertyName = "ThirdOption";
+            this.thirdOptionDataGridViewTextBoxColumn.HeaderText = "ThirdOption";
+            this.thirdOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thirdOptionDataGridViewTextBoxColumn.Name = "thirdOptionDataGridViewTextBoxColumn";
+            // 
+            // fourthOptionDataGridViewTextBoxColumn
+            // 
+            this.fourthOptionDataGridViewTextBoxColumn.DataPropertyName = "FourthOption";
+            this.fourthOptionDataGridViewTextBoxColumn.HeaderText = "FourthOption";
+            this.fourthOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fourthOptionDataGridViewTextBoxColumn.Name = "fourthOptionDataGridViewTextBoxColumn";
+            // 
+            // correctAnswerDataGridViewTextBoxColumn
+            // 
+            this.correctAnswerDataGridViewTextBoxColumn.DataPropertyName = "CorrectAnswer";
+            this.correctAnswerDataGridViewTextBoxColumn.HeaderText = "CorrectAnswer";
+            this.correctAnswerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.correctAnswerDataGridViewTextBoxColumn.Name = "correctAnswerDataGridViewTextBoxColumn";
+            // 
+            // quizTypeDataGridViewTextBoxColumn
+            // 
+            this.quizTypeDataGridViewTextBoxColumn.DataPropertyName = "QuizType";
+            this.quizTypeDataGridViewTextBoxColumn.HeaderText = "QuizType";
+            this.quizTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quizTypeDataGridViewTextBoxColumn.Name = "quizTypeDataGridViewTextBoxColumn";
             // 
             // Form6
             // 
@@ -321,6 +379,7 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1329, 681);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.dataGridView1);
@@ -330,9 +389,12 @@ namespace WindowsFormsApp2
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataQuesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,13 +419,19 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource dataQuesBindingSource;
+        private DatabaseDataSetTableAdapters.DataQuesTableAdapter dataQuesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn questionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstOptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secondOptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thirdOptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fourthOptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correctAnswerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quizTypeDataGridViewTextBoxColumn;
     }
 }

@@ -78,7 +78,7 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2CirclePictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.exam__1_;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(229, 76);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(206, 53);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
