@@ -44,6 +44,7 @@ namespace WindowsFormsApp2
             // TODO: This line of code loads data into the 'databaseDataSet.DataQues' table. You can move, or remove it, as needed.
             this.dataQuesTableAdapter.Fill(this.databaseDataSet.DataQues);
             dataGridView1.DataSource = LoadUserTable();
+            textBox1.Clear(); textBox2.Clear(); textBox3.Clear(); textBox4.Clear(); textBox5.Clear(); textBox6.Clear();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -129,6 +130,38 @@ namespace WindowsFormsApp2
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (check(textBox1.Text) == true || check(textBox2.Text) == true || check(textBox3.Text) == true || check(textBox4.Text) == true || check(textBox5.Text) == true || check(textBox6.Text) == true)
+            {
+                MessageBox.Show("please enter the required data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                con.Open();
+                string query = "UPDATE DataQues SET Question=@Question ,FirstOption=@FirstOption , SecondOption=@SecondOption, ThirdOption=@ThirdOption , FourthOption=@FourthOption , CorrectAnswer=@CorrectAnswer ,QuizType = @QuizType  WHERE id= '" + dataGridView1.CurrentRow.Cells[0].Value + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Question", textBox1.Text);
+                cmd.Parameters.AddWithValue("@FirstOption", textBox2.Text);
+                cmd.Parameters.AddWithValue("@SecondOption", textBox3.Text);
+                cmd.Parameters.AddWithValue("@ThirdOption", textBox4.Text);
+                cmd.Parameters.AddWithValue("@FourthOption", textBox5.Text);
+                cmd.Parameters.AddWithValue("@CorrectAnswer", textBox6.Text);
+                cmd.Parameters.AddWithValue("@QuizType", label10.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("updated successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView1.DataSource = LoadUserTable();
+                textBox1.Clear(); textBox2.Clear(); textBox3.Clear(); textBox4.Clear(); textBox5.Clear(); textBox6.Clear();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3.form1.Show();
         }
     }
 }

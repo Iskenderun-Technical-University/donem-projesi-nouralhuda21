@@ -61,12 +61,13 @@ namespace WindowsFormsApp2
             this.databaseDataSet = new WindowsFormsApp2.DatabaseDataSet();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.dataQuesTableAdapter = new WindowsFormsApp2.DatabaseDataSetTableAdapters.DataQuesTableAdapter();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataQuesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,9 +151,9 @@ namespace WindowsFormsApp2
             this.guna2Button1.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2Button1.Location = new System.Drawing.Point(147, 583);
+            this.guna2Button1.Location = new System.Drawing.Point(139, 564);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(129, 35);
+            this.guna2Button1.Size = new System.Drawing.Size(114, 36);
             this.guna2Button1.TabIndex = 11;
             this.guna2Button1.Text = "save";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -351,6 +352,7 @@ namespace WindowsFormsApp2
             // 
             // guna2Button4
             // 
+            this.guna2Button4.BorderRadius = 15;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -360,13 +362,14 @@ namespace WindowsFormsApp2
             this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2Button4.Location = new System.Drawing.Point(429, 553);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(93, 30);
+            this.guna2Button4.Size = new System.Drawing.Size(105, 36);
             this.guna2Button4.TabIndex = 14;
             this.guna2Button4.Text = "delete";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button2
             // 
+            this.guna2Button2.BorderRadius = 15;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -374,28 +377,29 @@ namespace WindowsFormsApp2
             this.guna2Button2.FillColor = System.Drawing.Color.White;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2Button2.Location = new System.Drawing.Point(539, 553);
+            this.guna2Button2.Location = new System.Drawing.Point(540, 553);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(94, 30);
+            this.guna2Button2.Size = new System.Drawing.Size(113, 36);
             this.guna2Button2.TabIndex = 15;
             this.guna2Button2.Text = "edit";
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1283, 2);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 49;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // dataQuesTableAdapter
             // 
             this.dataQuesTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources.exit;
+            this.pictureBox2.Location = new System.Drawing.Point(1279, 638);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form6
             // 
@@ -403,7 +407,7 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1329, 681);
-            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.dataGridView1);
@@ -419,6 +423,7 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataQuesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,7 +450,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.BindingSource dataQuesBindingSource;
         private DatabaseDataSetTableAdapters.DataQuesTableAdapter dataQuesTableAdapter;
@@ -459,5 +463,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn quizTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
