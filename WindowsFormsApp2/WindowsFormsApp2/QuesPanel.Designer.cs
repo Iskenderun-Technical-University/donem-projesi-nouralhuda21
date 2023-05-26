@@ -51,10 +51,9 @@ namespace WindowsFormsApp2
             this.guna2Panel1.Controls.Add(this.guna2RadioButton1);
             this.guna2Panel1.Controls.Add(this.textBox1);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(493, 371);
+            this.guna2Panel1.Size = new System.Drawing.Size(368, 278);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Button1
@@ -66,7 +65,7 @@ namespace WindowsFormsApp2
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2Button1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(294, 305);
+            this.guna2Button1.Location = new System.Drawing.Point(180, 214);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 6;
@@ -80,7 +79,7 @@ namespace WindowsFormsApp2
             this.guna2RadioButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton4.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton4.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton4.Location = new System.Drawing.Point(38, 294);
+            this.guna2RadioButton4.Location = new System.Drawing.Point(3, 238);
             this.guna2RadioButton4.Name = "guna2RadioButton4";
             this.guna2RadioButton4.Size = new System.Drawing.Size(152, 21);
             this.guna2RadioButton4.TabIndex = 5;
@@ -98,7 +97,7 @@ namespace WindowsFormsApp2
             this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(38, 244);
+            this.guna2RadioButton3.Location = new System.Drawing.Point(3, 188);
             this.guna2RadioButton3.Name = "guna2RadioButton3";
             this.guna2RadioButton3.Size = new System.Drawing.Size(152, 21);
             this.guna2RadioButton3.TabIndex = 4;
@@ -116,7 +115,7 @@ namespace WindowsFormsApp2
             this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(38, 199);
+            this.guna2RadioButton2.Location = new System.Drawing.Point(3, 143);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.Size = new System.Drawing.Size(152, 21);
             this.guna2RadioButton2.TabIndex = 3;
@@ -134,7 +133,7 @@ namespace WindowsFormsApp2
             this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(38, 152);
+            this.guna2RadioButton1.Location = new System.Drawing.Point(3, 96);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.Size = new System.Drawing.Size(152, 21);
             this.guna2RadioButton1.TabIndex = 2;
@@ -146,17 +145,21 @@ namespace WindowsFormsApp2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 83);
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(3, 46);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 31);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(357, 31);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Urdu Typesetting", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 30);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 33);
             this.label1.TabIndex = 0;
@@ -174,7 +177,7 @@ namespace WindowsFormsApp2
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "QuesPanel";
-            this.Size = new System.Drawing.Size(493, 371);
+            this.Size = new System.Drawing.Size(366, 280);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

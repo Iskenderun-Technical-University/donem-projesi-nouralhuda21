@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
             this.guna2Button1.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2Button1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(608, 205);
+            this.guna2Button1.Location = new System.Drawing.Point(1137, 379);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 0;
@@ -53,16 +53,19 @@ namespace WindowsFormsApp2
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(-2, -2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(593, 450);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1133, 782);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(604, 26);
+            this.label1.Location = new System.Drawing.Point(1162, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 2;
@@ -73,7 +76,7 @@ namespace WindowsFormsApp2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(707, 26);
+            this.label2.Location = new System.Drawing.Point(1265, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 21);
             this.label2.TabIndex = 3;
@@ -83,7 +86,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1343, 782);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -91,6 +94,7 @@ namespace WindowsFormsApp2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form7";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

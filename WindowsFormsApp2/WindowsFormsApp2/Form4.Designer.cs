@@ -81,7 +81,6 @@ namespace WindowsFormsApp2
             this.label11.Size = new System.Drawing.Size(50, 25);
             this.label11.TabIndex = 43;
             this.label11.Text = "NUR";
-           
             // 
             // label10
             // 
@@ -94,7 +93,7 @@ namespace WindowsFormsApp2
             this.label10.Size = new System.Drawing.Size(76, 25);
             this.label10.TabIndex = 42;
             this.label10.Text = "HELLO ,";
-           
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.HotPink;
@@ -385,7 +384,7 @@ namespace WindowsFormsApp2
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2CirclePictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.private_account;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(48, 123);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(64, 139);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
