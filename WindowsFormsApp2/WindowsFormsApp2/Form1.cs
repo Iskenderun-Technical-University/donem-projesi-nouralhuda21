@@ -55,6 +55,10 @@ namespace WindowsFormsApp2
             Application.Exit();
         }
 
-       
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Form3.form10.Show();
+        }
     }
-}
+    }
+

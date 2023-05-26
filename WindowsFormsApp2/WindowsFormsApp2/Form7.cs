@@ -25,6 +25,9 @@ namespace WindowsFormsApp2
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            guna2Button1.Enabled = false;
+            
+
             flowLayoutPanel1.Controls.Clear();
             DataTable dt = new DataTable();
             string query = "select * from DataQues Where QuizType = '" + label2.Text + "'";
@@ -55,6 +58,11 @@ namespace WindowsFormsApp2
         private void Form7_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

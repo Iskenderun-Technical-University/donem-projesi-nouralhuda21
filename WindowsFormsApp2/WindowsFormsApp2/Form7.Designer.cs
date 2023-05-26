@@ -33,6 +33,7 @@ namespace WindowsFormsApp2
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2Button1
@@ -44,7 +45,7 @@ namespace WindowsFormsApp2
             this.guna2Button1.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2Button1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1137, 379);
+            this.guna2Button1.Location = new System.Drawing.Point(1137, 383);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 0;
@@ -82,11 +83,28 @@ namespace WindowsFormsApp2
             this.label2.TabIndex = 3;
             this.label2.Text = "test";
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Button2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(1137, 458);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button2.TabIndex = 4;
+            this.guna2Button2.Text = "Quiz End";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 782);
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -106,5 +124,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
+        public Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
