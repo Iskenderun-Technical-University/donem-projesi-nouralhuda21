@@ -29,11 +29,13 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // guna2Button1
@@ -99,6 +101,10 @@ namespace WindowsFormsApp2
             this.guna2Button2.Text = "Quiz End";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -125,5 +131,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

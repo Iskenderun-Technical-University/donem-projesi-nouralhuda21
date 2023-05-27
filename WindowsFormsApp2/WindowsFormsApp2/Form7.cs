@@ -13,11 +13,24 @@ namespace WindowsFormsApp2
     public partial class Form7 : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\proje3\donem-projesi-nouralhuda21\WindowsFormsApp2\WindowsFormsApp2\Database.mdf;Integrated Security=True");
+
         public Form7()
         {
             InitializeComponent();
         }
+        public void testc()
+        {
+            Timer t = new Timer();
+            t.Interval = 10000 ;
+            t.Tick += new EventHandler(timer1_Tick);
+            t.Start();
+            
 
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +38,7 @@ namespace WindowsFormsApp2
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            testc();
             guna2Button1.Enabled = false;
             
 
@@ -64,5 +78,7 @@ namespace WindowsFormsApp2
         {
           
         }
+
+        
     }
 }

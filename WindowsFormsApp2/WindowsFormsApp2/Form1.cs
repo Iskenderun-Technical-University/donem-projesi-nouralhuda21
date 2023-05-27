@@ -59,6 +59,11 @@ namespace WindowsFormsApp2
         {
             Form3.form10.Show();
         }
+
+        private void guna2ControlBox1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
     }
 

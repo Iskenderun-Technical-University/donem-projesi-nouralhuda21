@@ -61,5 +61,10 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
