@@ -39,11 +39,13 @@ namespace WindowsFormsApp2
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2RadioButton4);
             this.guna2Panel1.Controls.Add(this.guna2RadioButton3);
@@ -51,10 +53,12 @@ namespace WindowsFormsApp2
             this.guna2Panel1.Controls.Add(this.guna2RadioButton1);
             this.guna2Panel1.Controls.Add(this.textBox1);
             this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(368, 278);
+            this.guna2Panel1.Size = new System.Drawing.Size(366, 280);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2Button1
             // 
@@ -65,11 +69,12 @@ namespace WindowsFormsApp2
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.guna2Button1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(180, 214);
+            this.guna2Button1.Location = new System.Drawing.Point(192, 220);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(168, 39);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Check your Answer";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2RadioButton4
             // 
@@ -170,6 +175,17 @@ namespace WindowsFormsApp2
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(113, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // QuesPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -195,5 +211,6 @@ namespace WindowsFormsApp2
         public Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         public Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
         public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label2;
     }
 }

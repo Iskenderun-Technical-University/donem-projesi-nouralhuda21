@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
         public void testc()
         {
             Timer t = new Timer();
-            t.Interval = 10000 ;
+            t.Interval = 10000*60 ;
             t.Tick += new EventHandler(timer1_Tick);
             t.Start();
             
@@ -54,6 +54,7 @@ namespace WindowsFormsApp2
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 QuesPanel ques = new QuesPanel();
+                ques.label2.Text = dt.Rows[i][0].ToString();
                 ques.textBox1.Text = dt.Rows[i][1].ToString();
                 ques.guna2RadioButton1.Text = dt.Rows[i][2].ToString();
                 ques.guna2RadioButton2.Text = dt.Rows[i][3].ToString();
@@ -76,7 +77,8 @@ namespace WindowsFormsApp2
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-          
+            MessageBox.Show("Your Note İs : " + QuesPanel.i * 5);
+            this.Close();
         }
 
         
