@@ -29,6 +29,16 @@ namespace WindowsFormsApp2
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            string query = "insert into StNotes (StName , QuizType , Notes) values (@StName ,@QuizType ,@Notes) ";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@StName", Form3.form4.label11.Text);
+            cmd.Parameters.AddWithValue("@QuizType", label2.Text);
+            cmd.Parameters.AddWithValue("@Notes", QuesPanel.i * 5);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Your Note İs : " + QuesPanel.i * 5 + " and saved to table successfully");
             this.Close();
         }
         private void label1_Click(object sender, EventArgs e)
@@ -77,7 +87,16 @@ namespace WindowsFormsApp2
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Your Note İs : " + QuesPanel.i * 5);
+            string query = "insert into StNotes (StName , QuizType , Notes) values (@StName ,@QuizType ,@Notes) ";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@StName", Form3.form4.label11.Text);
+            cmd.Parameters.AddWithValue("@QuizType", label2.Text);
+            cmd.Parameters.AddWithValue("@Notes", QuesPanel.i*5);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Your Note İs : " + QuesPanel.i * 5 + " and saved to table successfully");
             this.Close();
         }
 
