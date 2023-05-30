@@ -18,9 +18,10 @@ namespace WindowsFormsApp2
         public static Form7 form7 = new Form7();
         public static Form8 form8 = new Form8();
         public static Form9 form9 = new Form9();
-        public static QuesPanel Panel = new QuesPanel();
         public static Form10 form10 = new Form10();
+        public static QuesPanel Panel = new QuesPanel();
         public static PanelList Panel1 = new PanelList();
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Hide();
