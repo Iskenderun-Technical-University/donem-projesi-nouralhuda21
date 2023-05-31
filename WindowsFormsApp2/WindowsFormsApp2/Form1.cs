@@ -36,7 +36,14 @@ namespace WindowsFormsApp2
             SqlDataAdapter Adb2 = new SqlDataAdapter(cmd2);
             Adb.Fill(dt);
             Adb.Fill(dt2);
+            string query3 = "select  count (distinct QuizType) From DataQues";
+            string query4 = "select  count (*) From DataQues";
+            SqlCommand cmd3 = new SqlCommand(query3, con);
+            SqlCommand cmd4 = new SqlCommand(query4, con);
+            label9.Text = cmd3.ExecuteScalar().ToString();
+            label8.Text = cmd4.ExecuteScalar().ToString();
             con.Close();
+
            label6.Text = dt.Rows.Count.ToString();
             label7.Text = dt2.Rows.Count.ToString();
         }
@@ -63,6 +70,21 @@ namespace WindowsFormsApp2
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox8_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
