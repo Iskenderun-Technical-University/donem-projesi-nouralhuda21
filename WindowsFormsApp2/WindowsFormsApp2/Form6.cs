@@ -160,8 +160,9 @@ namespace WindowsFormsApp2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form3.form1.Show();
+            this.Close();
+            Form1 form = new Form1();
+            form.Show();
         }
     }
 }

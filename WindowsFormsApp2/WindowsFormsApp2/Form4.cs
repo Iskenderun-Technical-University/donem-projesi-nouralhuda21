@@ -69,5 +69,10 @@ namespace WindowsFormsApp2
             Form3.form2.Show();
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

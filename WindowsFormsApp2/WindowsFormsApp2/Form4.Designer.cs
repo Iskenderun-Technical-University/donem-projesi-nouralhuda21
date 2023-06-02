@@ -275,6 +275,7 @@ namespace WindowsFormsApp2
             this.label8.Size = new System.Drawing.Size(24, 30);
             this.label8.TabIndex = 1;
             this.label8.Text = "0";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // groupBox1
             // 
@@ -426,6 +427,7 @@ namespace WindowsFormsApp2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox3.ResumeLayout(false);

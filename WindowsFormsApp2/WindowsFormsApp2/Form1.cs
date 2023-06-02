@@ -53,7 +53,8 @@ namespace WindowsFormsApp2
 
         private void label5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            
             Form3.form5.Show();
         }
 
@@ -83,6 +84,11 @@ namespace WindowsFormsApp2
         }
 
         private void guna2CirclePictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
